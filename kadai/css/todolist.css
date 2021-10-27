@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 26px;
+    width: 100%;
+}
+
+#selectable .ui-selecting {
+    background: #FECA40;
+}
+#selectable .ui-selected {
+    background: #F39814; color: white;
+}
+input {
+    font-size: 100%;
+}
+fieldset {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px 15px;
+    border: 3px #0080ff groove;
+    background-color: #b0c4de;
+    width: 600px;
+    line-height: 3px;
+}
+
+legend {
+font-weight: bold;
+}
+

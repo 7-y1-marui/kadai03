@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>TODOリスト</title>
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/todolist.css">
+</head>
+<body>
+<header>
+<h1>TODOリスト</h1>
+</header>
+<main>
+    <fieldset>
+    <input type="text" id="todo" placeholder="TODO">
+    <input type="button" id ="addTodoItem" value = "追加" onclick = "addTodoItem()">
+    <table id="todolist">
+    </table>
+    </fieldset>
+</main>
+
+
+<!-- ここからJS -->
+<script>
+//1.追加 クリックイベント
+$("#addTodoItem").on("click",function(){
+    const todo = $("#todo").val();
+    localStorage.setItem(todo);
+    const html = `
+                <tr>
+                    <th>${todo}</th>
+                </tr>
+                `;
+    $("#todo").val(""); 
+});
+
+
+function addTodoItem() {
+$('#todolist').append(' <p><input type="checkbox"><input type="text"></p>');
+    
+}
+
+</script>
+</body>
+</html>
